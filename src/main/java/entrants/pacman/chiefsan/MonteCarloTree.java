@@ -85,7 +85,7 @@ public class MonteCarloTree {
             visitedNodes.add(node);
 
             while (!node.isLeafNode()) {
-                node = new UCB1SelectionPolicy().selectChild(node);
+                node = new UCBTunedSelectionPolicy().selectChild(node);
 
                 if (node == null)
                     return;
@@ -150,7 +150,7 @@ public class MonteCarloTree {
                     popGameState();
                 }
 
-                node = new UCB1SelectionPolicy().selectChild(node);
+                node = new UCBTunedSelectionPolicy().selectChild(node);
                 if (node == null)
                     return;
 

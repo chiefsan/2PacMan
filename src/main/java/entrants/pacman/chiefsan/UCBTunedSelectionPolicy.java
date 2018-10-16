@@ -3,7 +3,7 @@ package entrants.pacman.chiefsan;
 /**
  * Computes UCB and selects the children
  */
-public class UCB1SelectionPolicy {
+public class UCBTunedSelectionPolicy {
 
     private static final double DEFAULT_BALANCE_PARAMETER = 10000;
     private double balanceParameter;
@@ -11,7 +11,7 @@ public class UCB1SelectionPolicy {
     /**
      * Default constructor
      */
-    public UCB1SelectionPolicy() {
+    public UCBTunedSelectionPolicy() {
         this.balanceParameter = DEFAULT_BALANCE_PARAMETER;
     }
 
@@ -41,7 +41,9 @@ public class UCB1SelectionPolicy {
     }
 
     public double getUcbValue(MonteCarloTreeNode node) {
-        return node.getAverageScore() + balanceParameter *
-                Math.sqrt(Math.log(node.getParent().getNumberOfVisits()) / node.getNumberOfVisits());
+//        return node.getAverageScore() + balanceParameter *
+//                Math.sqrt(Math.log(node.getParent().getNumberOfVisits()) / node.getNumberOfVisits());
+        return node.getAverageScore() + 1 *
+                Math.sqrt(2*Math.log(node.getParent().getNumberOfVisits()) / node.getNumberOfVisits()*Math.min(0.25, node.getNumberOfVisits()));
     }
 }

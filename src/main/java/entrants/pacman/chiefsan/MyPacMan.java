@@ -79,6 +79,26 @@ public class MyPacMan extends PacmanController {
     public static MOVE nonJunctionSim(Game game){
 
         int myNodeIndex = game.getPacmanCurrentNodeIndex();
+        int minDistance = Integer.MAX_VALUE;
+
+        Constants.GHOST minGhost = null;
+        for (Constants.GHOST ghost : Constants.GHOST.values()) {
+            if (game.getGhostEdibleTime(ghost) > 0) {
+                int distance = game.getShortestPathDistance(myNodeIndex, game.getGhostCurrentNodeIndex(ghost));
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    minGhost = ghost;
+                }
+            }
+        }
+
+        if (minGhost != null) {
+            return game.getNextMoveTowardsTarget(
+                    myNodeIndex,
+                    game.getGhostCurrentNodeIndex(minGhost),
+                    Constants.DM.PATH);
+        }
 
         int[] powerPills = game.getPowerPillIndices();
         int[] pills = game.getPillIndices();
@@ -142,6 +162,7 @@ public class MyPacMan extends PacmanController {
 
         ITreeEvaluator[] additionalEvaluators = new ITreeEvaluator[] {
                 new Evaluator1(),
+//                new Evaluator2(),
                 new Evaluator3(),
                 new Evaluator4()};
 

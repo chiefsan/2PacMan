@@ -10,8 +10,8 @@ import pacman.game.Game;
 
 public class Evaluator3 implements ITreeEvaluator {
 
-    private static final int DEFAULT_PENALTY = 300;
     private int penalty;
+    private static final int DEFAULT_PENALTY = 900;
 
 
     public Evaluator3(int penalty) {

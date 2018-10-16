@@ -11,9 +11,9 @@ import pacman.game.Game;
 
 public class Evaluator1 implements ITreeEvaluator {
 
+    private int ghostScore, pillScore;
     private static final int DEFAULT_GHOST_SCORE = 400;
     private static final int DEFAULT_PILL_SCORE = 200;
-    private int ghostScore, pillScore;
 
     public Evaluator1(int ghostScore, int pillScore) {
         this.ghostScore = ghostScore;
