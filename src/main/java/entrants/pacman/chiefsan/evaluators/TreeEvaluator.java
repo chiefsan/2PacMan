@@ -2,6 +2,6 @@ package entrants.pacman.chiefsan.evaluators;
 
 import entrants.pacman.chiefsan.MonteCarloTree;
 
-public interface ITreeEvaluator {
+public interface TreeEvaluator {
     void evaluateTree(MonteCarloTree simulator);
 }

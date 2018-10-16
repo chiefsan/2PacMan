@@ -160,13 +160,13 @@ public class MyPacMan extends PacmanController {
             tree.simulate();
         }
 
-        ITreeEvaluator[] additionalEvaluators = new ITreeEvaluator[] {
+        TreeEvaluator[] additionalEvaluators = new TreeEvaluator[] {
                 new Evaluator1(),
 //                new Evaluator2(),
                 new Evaluator3(),
                 new Evaluator4()};
 
-        for (ITreeEvaluator evaluator: additionalEvaluators) {
+        for (TreeEvaluator evaluator: additionalEvaluators) {
             evaluator.evaluateTree(tree);
         }
 

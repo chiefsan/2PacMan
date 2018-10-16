@@ -3,7 +3,7 @@ package entrants.pacman.chiefsan.evaluators;
 import entrants.pacman.chiefsan.MonteCarloTreeNode;
 import entrants.pacman.chiefsan.MonteCarloTree;
 
-public class Evaluator4 implements ITreeEvaluator {
+public class Evaluator4 implements TreeEvaluator {
 
     private static final int RULE1_DEFAULT_BONUS = 400;
     private static final int RULE2_DEFAULT_BONUS = 300;

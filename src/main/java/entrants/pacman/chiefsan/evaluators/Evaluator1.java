@@ -9,7 +9,7 @@ import pacman.game.Constants.GHOST;
 import pacman.game.Constants.MOVE;
 import pacman.game.Game;
 
-public class Evaluator1 implements ITreeEvaluator {
+public class Evaluator1 implements TreeEvaluator {
 
     private int ghostScore, pillScore;
     private static final int DEFAULT_GHOST_SCORE = 400;

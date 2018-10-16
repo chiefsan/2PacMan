@@ -8,7 +8,7 @@ import pacman.game.Constants.GHOST;
 import pacman.game.Game;
 
 
-public class Evaluator3 implements ITreeEvaluator {
+public class Evaluator3 implements TreeEvaluator {
 
     private int penalty;
     private static final int DEFAULT_PENALTY = 900;

@@ -11,7 +11,7 @@ import pacman.game.Game;
 
 import java.util.Random;
 
-public class Evaluator2 implements ITreeEvaluator {
+public class Evaluator2 implements TreeEvaluator {
     private int bonus;
     private static final int DEFAULT_BONUS = 300;
 
