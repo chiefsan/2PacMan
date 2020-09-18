@@ -1,4 +1,4 @@
 plugins:
   - jekyll-remote-theme
 
-remote_theme: chiefsan/chiefsan.github.io
+remote_theme: chiefsan/minimal
