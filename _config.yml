@@ -11,4 +11,3 @@ admin_name: 'Sanjay Seetharaman'
 google_analytics: "UA-164910723-1" # Update with your own tracking ID
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://chiefsan.github.io" # the base hostname & protocol for your site, e.g. https://example.com
-
