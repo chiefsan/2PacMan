@@ -2,3 +2,12 @@ plugins:
   - jekyll-remote-theme
 
 remote_theme: chiefsan/minimal
+show_downloads: true
+enable_nav: true
+nav_item:
+  - { url: '/', text: 'Home' }
+  - { url: '/cv', text: 'CV' }
+admin_name: 'Sanjay Seetharaman'
+google_analytics: "UA-164910723-1" # Update with your own tracking ID
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://chiefsan.github.io" # the base hostname & protocol for your site, e.g. https://example.com
